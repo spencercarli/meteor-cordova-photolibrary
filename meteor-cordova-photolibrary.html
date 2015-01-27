@@ -1,0 +1,35 @@
+<head>
+  <title>meteor-cordova-photolibrary</title>
+</head>
+
+<body>
+  <h1>Access the Photo Library on Meteor Cordova!</h1>
+
+  {{> cameraEvent}}
+  {{> libraryEvent}}
+  {{> img}}
+</body>
+
+<template name="cameraEvent">
+  <div>
+    <p>Camera</p>
+    <button>Click Me</button>
+  </div>
+</template>
+
+<template name="libraryEvent">
+  <div>
+    <p>Library</p>
+    <button>Click Me</button>
+  </div>
+</template>
+
+<template name="img">
+  <div>
+    {{#if img}}
+      <img src="{{img}}" alt="">
+    {{else}}
+      <p>No image yet.</p>
+    {{/if}}
+  </div>
+</template>
